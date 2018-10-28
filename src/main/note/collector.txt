@@ -1,0 +1,21 @@
+1. collect：收集器
+
+2. Collector：collect方法的参数
+
+3. Collector是一个接口，它是一个可变的汇聚操作，将输入元素累积到一个可变的结果容器中；它会在所有元素都处理完毕后，将累积的结果转换为一个最终的表示(这是可选的操作)；支持串行和并行两种方式执行。
+
+4. Collectors本身提供了关于Collector的常见汇聚实现，Collectors本身实际上是一个工厂。
+
+5. 为了保证串行与并行操作结果的等价性，Collector函数需要满足一下两个条件：identity(同一性)与associativity(结合性)。
+
+6. a == combiner.apply(a, supplier.get())
+
+7. 函数式编程的最大特点：表示做什么，而不是如何做。
+
+8. 自定义Collector收集器。
+
+9. Characteristic.CONCURRENT：该枚举值表示多个线程对同一个中间容器进行操作，此时collect的bombiner方法将不会被调用。
+
+10. 超线程技术：一个CPU核心模拟成两个核心。
+
+11. 总结

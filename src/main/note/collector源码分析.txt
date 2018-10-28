@@ -1,0 +1,13 @@
+对于Collectors静态工厂类来说，其实现一共分为两种情况：
+1. 通过CollectorImpl来实现；
+2. 通过reducing方法来实现：reducing方法本身又是通过CollectorImpl来实现的。
+
+summingInt方法：构造了一个长度为1的数组int[1]进行累加，这是由于数组是一个引用对象，是可以传递的，并且可以作为中间容器；而数字是不可变的，无法进行传递。
+
+summingDouble：用了补偿机制来控制结果的精度。
+
+groupingBy方法(重点！！)
+
+groupingByConcurrent方法(用到了concurrentHashMap)
+
+partitioningBy方法
