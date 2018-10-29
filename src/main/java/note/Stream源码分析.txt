@@ -1,0 +1,6 @@
+1. AutoCloseable接口
+
+2. Stream接口doc文档
+
+3. Spliterator接口
+对源中的元素进行遍历和分区
